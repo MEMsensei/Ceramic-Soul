@@ -1,0 +1,104 @@
+@use "/src/sass/pxtorem.scss" as *;
+
+.promo {
+    padding-top: rem(50);
+    position: relative;
+    &__wrapper{
+        margin-top: rem(50);
+    }
+
+    &__title{
+        padding-inline: 0 rem(5);
+    }
+
+    &__cta{
+        margin-top: rem(40);
+    }
+
+    &__img{
+        margin: 0 auto;
+        width: rem(270);
+        height: rem(377);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+    }
+
+    &__btn{
+        margin: rem(18) auto 0;
+    }
+
+    &__potter{
+        display: none;
+    }
+}
+
+@media screen and (min-width: rem(768)){
+    .promo{
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__cta{
+            margin-top: 0;
+        }
+
+        &__img{
+            width: rem(230);
+            height: rem(321);
+        }
+
+        &__title{
+            padding-inline: 0;
+            padding-top: rem(250);
+            padding-left: rem(71);
+            text-align-last: left;
+        }
+    }
+}
+
+@media screen and (min-width: rem(1200)){
+    .promo{
+        &__potter{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: clamp(rem(450), 37.5vw ,rem(640));
+            height: rem(633);
+            object-fit: cover;
+        }
+
+        &__title{
+            padding-left: rem(571);
+        }
+    }
+}
+
+@media screen and (min-width: rem(1920)){
+    .promo{
+        padding-top: rem(40);
+
+        &__wrapper{
+            margin-top: rem(79);
+        }
+
+        &__img{
+            width: rem(330);
+            height: rem(460);
+        }
+
+        &__btn{
+            margin: rem(50) auto 0;
+        }
+
+        &__title{
+            padding-top: rem(384);
+            padding-left: rem(642);
+        }
+
+        &__potter{
+            height: rem(900);
+        }
+    }
+}

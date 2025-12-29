@@ -1,0 +1,15 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.title-h1-italic{
+    @include title;
+    font-size: rem(24);
+    font-style: italic;
+    text-align: center;
+}
+
+@media screen and (min-width: rem(1920)){
+    .title-h1-italic{
+        font-size: rem(32);
+    }
+}

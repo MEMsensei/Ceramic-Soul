@@ -1,37 +1,11 @@
 @use "/src/sass/libs/modern-normalize.min.css";
 @use "/src/sass/libs/fontello.css";
 
-@use "/src/sass/base/variables.scss" as *;
-@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/basic.scss";
 
-:root {
-  line-height: 1.5;
-  font-family: "Barlow", sans-serif;
-  scroll-behavior: smooth;
-}
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/promo.scss";
 
-h1, h2, h3, h4, h5, figure, p, ol, ul {
-  margin: 0;
-}
-
-ol[role="list"], ul[role="list"] {
-  list-style: none;
-  padding-inline: 0;
-}
-
-h1, h2, h3, h4, h5 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-img {
-  display: block;
-  max-inline-size: 100%;
-}
-
-.test{
-  background-color: $ui-error;
-  width: rem(300);
-  height: rem(300);
-}
+@use "/src/sass/ui/titles.scss";
+@use "/src/sass/ui/buttons.scss";
 

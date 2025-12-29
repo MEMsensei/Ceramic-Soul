@@ -1,0 +1,93 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.header{
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    &__icons{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        a {
+            display: block;
+            span{
+                display: block;
+                width: rem(20);
+                height: rem(20);
+                color: v.$dark;
+            }
+        }
+    }
+    &__nav{
+        display: none;
+    }
+}
+
+.burger{
+    display: flex;
+    height: 23px;
+    flex-direction: column;
+    row-gap: rem(10);
+    padding-right: rem(35);
+    span{
+        display: block;
+        width: rem(20);
+        height: rem(1);
+        background-color: v.$dark;
+    }
+}
+
+@media screen and (min-width: rem(768)) {
+    .header{
+        &__nav{
+            margin-top: rem(20);
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                padding-left: 0;
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    color: v.$dark;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: rem(20);
+                }
+            }
+        }
+
+        &__nav{
+            display: block;
+        }
+    }
+    .burger{
+        visibility: hidden;
+    }
+    
+}
+
+@media screen and (min-width: rem(1920)){
+    .header{
+        &__logo{
+            width: 150px;
+            height: 151px;
+        }
+
+        &__nav{
+            margin-top: rem(36);
+            ul{
+                gap: rem(60);
+            }
+        }
+    }
+}
