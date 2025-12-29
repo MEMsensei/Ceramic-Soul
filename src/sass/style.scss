@@ -1,8 +1,13 @@
-@use "/src/sass/modern-normalize.min.css";
-@use "/src/sass/fontello.css";
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/libs/fontello.css";
+
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/pxtorem.scss" as *;
 
 :root {
   line-height: 1.5;
+  font-family: "Barlow", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -23,3 +28,10 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+.test{
+  background-color: $ui-error;
+  width: rem(300);
+  height: rem(300);
+}
+
