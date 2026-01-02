@@ -1,0 +1,77 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.activities{
+    padding-top: rem(60);
+    &__wrapper{
+        margin-top: rem(20);
+        row-gap: rem(40);
+    }
+
+    &__img{
+        width: 100%;
+        margin-top: rem(40);
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__text{
+        margin-top: rem(20);
+        font-weight: 400;
+        font-size: 1rem;
+        color: v.$dark;
+
+        span{
+            font-weight: 500;
+            color: v.$ceramic;
+        }
+    }
+}
+
+@media screen and (min-width: rem(768)){
+    .activities{
+        padding: rem(65) rem(95) 0;
+        &__wrapper{
+            margin-top: rem(40);
+        }
+
+        &__text{
+            margin-top: rem(25);
+            font-size: rem(20);
+        }
+    }
+}
+
+@media screen and (min-width: rem(1024)){
+    .activities{
+        &__col{
+            padding: 0 10px;
+        }
+
+    }
+}
+
+@media screen and (min-width: rem(1200)){
+    .activities{
+        padding: rem(60) 0 0 0;
+
+        &__wrapper{
+            margin-top: rem(80);
+            
+        }
+
+        &__text{
+            &_fixed{
+                max-width: rem(556);
+            } 
+        }
+
+        &__img{
+            margin-top: rem(60);
+        }
+    }
+}
+@media screen and (min-width: rem(1920)){
+    .activities{
+        padding-top: rem(100);
+    }
+}

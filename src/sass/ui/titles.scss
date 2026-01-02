@@ -8,6 +8,36 @@
     text-align: center;
 }
 
+.title-h2{
+    @include title;
+    font-size: rem(32);
+    text-align: center;
+}
+
+.title-h3{
+    @include title;
+    font-size: rem(20);
+    text-align: center;
+
+}
+
+
+@media screen and (min-width: rem(768)){
+    .title-h2{
+        font-size: rem(36);
+    }
+
+    .title-h3{
+        font-size: rem(24);
+    }
+}
+
+@media screen and (min-width: rem(1200)){
+    .title-h2{
+        font-size: rem(40);
+    }
+}
+
 @media screen and (min-width: rem(1920)){
     .title-h1-italic{
         font-size: rem(32);
