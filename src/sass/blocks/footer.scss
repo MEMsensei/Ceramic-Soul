@@ -1,0 +1,62 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.footer{
+    background-color: v.$dark;
+    margin-top: rem(60);
+    padding-top: rem(50);
+    color: v.$light;
+
+    .title-h3{
+        font-size: 1rem;
+        text-align: left;
+        color: v.$light;
+    }
+
+    .newsletter{
+        p{
+            margin-top: rem(40);
+        }
+    }
+
+    form{
+        margin-top: rem(40);
+        fieldset{
+            border: none;
+            padding: 0;
+            margin: 0;
+            width: rem(293);
+            line-height: normal;
+
+            label{
+                display: block;
+            }
+            .email__label{
+                font-size: rem(14);
+                color: v.$ui-active;
+                font-weight: 400;
+            }
+
+            #footer__email{
+                display: inline-block;
+                height: rem(15);
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid v.$ui-active;
+                padding: 0;
+                color: v.$light;
+            }
+
+            #footer__email:focus-visible{
+                outline: none;
+            }
+        }
+
+        .footer__checkbox{
+            
+            margin-top: rem(20);
+        }
+        
+    }
+}
