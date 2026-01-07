@@ -25,6 +25,15 @@
     }
 }
 
+.btn-submit{
+    @include button;
+    font-size: 1rem;
+    width: rem(90);
+    height: rem(40);
+    border: 1px solid v.$light;
+    color: v.$light;
+}
+
 @media screen and (min-width: rem(1200)){
     .btn-default{
         &:hover{
