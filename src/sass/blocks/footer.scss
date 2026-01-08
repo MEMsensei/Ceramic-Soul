@@ -7,8 +7,18 @@
     padding: rem(50) 0;
     color: v.$light;
 
+    .newsletter{
+        padding-bottom: rem(40);
+    }
+
     &__wrapper{
         display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-socials__wrapper{
+        display: flex;
+        justify-content: space-between;
         row-gap: rem(40);
         flex-wrap: wrap;
     }
