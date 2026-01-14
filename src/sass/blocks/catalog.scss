@@ -9,10 +9,11 @@
 
     &__tabs{
         display: flex;
+        max-width: rem(459);
         column-gap: rem(50);
         row-gap: rem(13);
         flex-wrap: wrap;
-        margin-top: rem(60);
+        margin: rem(60) auto 0;
         border: 1px solid v.$dark;
         padding: rem(13) rem(35);
         
@@ -34,6 +35,103 @@
             height: 1px;
             background-color: #000 ;
             bottom: -1px;
+        }
+    }
+
+    &__content{
+        margin-top: rem(60);
+        &-item{
+            flex-wrap: wrap;
+            gap: rem(20);
+            justify-content: center;
+            align-items: start;
+        }
+        &__card{
+            width: rem(340);
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+            
+            &__img{
+                width: 100%;
+                height: rem(198);
+            }
+
+            &__descr{
+                border: rem(1) solid #000;
+                border-top: none;
+                font-weight: 500;
+                font-size: 16px;
+                color: #000;
+                padding: rem(11) 0 rem(17) rem(12);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: rem(768)) {
+    .catalog{
+        &__tabs{
+            margin: 0;
+            margin-top: rem(60);
+        }
+        &__content{
+            position: relative;
+            &-item{
+                padding: rem(10) rem(10) 0;
+                justify-content: start;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: rem(200);
+                    height: rem(1);
+                    background-color: #000;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 100px;
+                    left: -100px;
+                    transform: rotate(90deg);
+                    position: absolute;
+                    width: rem(200);
+                    height: rem(1);
+                    background-color: #000;
+
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: rem(1200)) {
+    .catalog{
+        &__content{
+            &-item{
+                gap: rem(35);
+                padding: rem(25) rem(25) 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: rem(1920)) {
+    .catalog{
+        &__content{
+            &-item{
+                justify-content: space-between;
+                row-gap: rem(25);
+            }
+
+            &__card{
+                width: rem(285);
+                min-height: rem(250);
+                &__image{
+                    height: rem(180);
+                }
+            }
         }
     }
 }
