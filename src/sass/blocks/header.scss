@@ -29,6 +29,56 @@
     &__nav{
         display: none;
     }
+
+    &__menu{
+        padding: rem(50) rem(10);
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: v.$light;
+        transition: all 0.4s;
+        &_active{
+            transform: translateX(100%);
+        }
+        &-close{
+            width: rem(20);
+            height: rem(20);
+            span{
+                display: block;
+                width: rem(20);
+                height: rem(3);
+                background-color: v.$dark;
+                &:nth-child(1){
+                    transform: translateY(rem(8)) rotate(45deg);
+                    
+
+                }
+                &:nth-child(2){
+                    transform: translateY(rem(8)) rotate(-45deg);
+                    
+                }
+            }
+        }
+        &-nav{
+            margin-top: rem(50);
+            padding-left: rem(14);
+            ul{
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                row-gap: rem(25);
+            }
+        }
+        &-link{
+            text-decoration: none;
+            color: v.$dark;
+            text-transform: uppercase;
+        }
+    }
+
 }
 
 .burger{
@@ -68,6 +118,10 @@
 
         &__nav{
             display: block;
+        }
+
+        &__menu{
+            display: none;
         }
     }
     .burger{
