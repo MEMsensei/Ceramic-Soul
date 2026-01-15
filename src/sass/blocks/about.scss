@@ -15,6 +15,11 @@
                 box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
             }
         }
+
+        &-text{
+            font-weight: 400;
+            font-size: 1rem;
+        }
     }
 
     &__title{
@@ -42,12 +47,15 @@
     }
 }
 
-@media screen and (min-width: rem(1200)) {
+@media screen and (min-width: rem(1920)) {
     .about{
         padding-top: rem(40);
 
         &__article{
             margin-top: rem(100);
+            &-text{
+                font-size: rem(20);
+            }
         }
 
         &__title{
@@ -55,5 +63,4 @@
         }
     }
 
-    
 }

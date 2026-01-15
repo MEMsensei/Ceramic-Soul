@@ -1,0 +1,52 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.map{
+    padding-top: rem(60);
+
+    &__wrapper{
+        margin-top: rem(60);
+        iframe{
+            width: 100%;
+            height: rem(206);
+        }
+    }
+}
+@media screen and (min-width: rem(768)) {
+    .map{
+        &__wrapper{
+            padding: 0 rem(29);
+            iframe{
+                height: rem(400);
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: rem(1200)) {
+    .map{
+        &__wrapper{
+            padding: 0;
+            iframe{
+                width: rem(663);
+                height: rem(500);
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: rem(1920)) {
+    .map{
+        padding-top: rem(100);
+        &__wrapper{
+            margin-top: rem(80);
+            iframe{
+                width: rem(801);
+                height: rem(604);
+            }
+        }
+    }
+}
