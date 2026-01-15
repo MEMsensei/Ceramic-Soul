@@ -19,7 +19,10 @@
 
     &__col-right{
         position: relative;
-        height: 525px;
+    }
+
+    form{
+        width: rem(340);
     }
 
     &__btn{
@@ -117,7 +120,7 @@
         }
 
         &__col-right{
-            height: 428px;
+            // height: 428px;
         }
         &__vase{
             display: block;
@@ -169,6 +172,7 @@
 
 @media screen and (min-width: rem(1920)) {
     .git{
+        margin-top: rem(100);
         &__wrapper{
             padding-right: rem(75);
         }
