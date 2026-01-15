@@ -1,0 +1,6 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.about{
+    padding-top: rem(50);
+}

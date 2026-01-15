@@ -128,3 +128,9 @@
         margin-top: rem(40);
     }
 }
+
+@media screen and (min-width: rem(1920)) {
+    .footer{
+        margin-top: rem(100);
+    }
+}

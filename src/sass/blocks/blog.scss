@@ -1,0 +1,119 @@
+@use "/src/sass/pxtorem.scss" as *;
+@use "/src/sass/base/variables.scss" as v;
+
+.blog{
+    padding-top: rem(50);
+
+    &__wrapper{
+        margin-top: rem(60);
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(40);
+    }
+
+    &__card{
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        background: v.$light;
+        border: 1px solid v.$dark;
+    }
+
+    &__title{
+        margin-top: rem(60);
+    }
+
+    &__title-h3{
+        text-align: left;
+    }
+
+    &__data{
+        &-column{
+            padding: rem(25) rem(25) 0 rem(25);
+            display: flex;
+            flex-direction: column;
+            gap: rem(25);
+        }
+    }
+    &__text{
+         margin-top: rem(25);
+         padding: 0 rem(25) rem(25);
+         font-weight: 400;
+         font-size: 1rem;
+         color: v.$dark;
+    }
+
+    &__img{
+        max-inline-size: calc(100% + 2px);
+        transform: translateX(-1px) translateY(-1px);
+    }
+}
+
+@media screen and (min-width: rem(768)) {
+     .blog{
+        &__wrapper{
+            padding: rem(25) rem(25) 0 rem(25);
+            position: relative;
+            &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: rem(200);
+                    height: rem(1);
+                    background-color: #000;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: rem(1);
+                    height: rem(200);
+                    background-color: #000;
+
+                }
+        }
+
+        &__text{
+            margin-top: rem(15);
+        }
+
+        &__data{
+            &-column{
+                gap: 0;
+                justify-content: space-between;
+            }
+        }
+
+        &__button{
+            transform: translateY(-1px);
+        }
+     }
+}
+
+@media screen and (min-width: rem(1200)) {
+    .blog{
+        &__wrapper{
+            justify-content: space-between;
+            align-items: start;
+            gap: rem(50);
+        }
+
+        &__card{
+            width: rem(520);
+        }
+
+        &__img{
+            height: rem(240);
+            object-fit: cover;
+            
+        }
+    }
+}
+
+@media screen and (min-width: rem(1920)) {
+    .blog{
+        &__card{
+            width: rem(670);
+        }
+    }
+}

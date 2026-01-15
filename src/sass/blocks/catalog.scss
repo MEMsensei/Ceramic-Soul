@@ -91,12 +91,10 @@
                 &::after{
                     content: "";
                     position: absolute;
-                    top: 100px;
-                    left: -100px;
-                    transform: rotate(90deg);
-                    position: absolute;
-                    width: rem(200);
-                    height: rem(1);
+                    top: 0;
+                    left: 0;
+                    width: rem(1);
+                    height: rem(200);
                     background-color: #000;
 
                 }
